@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 22 avr. 2020 à 09:00
+-- Généré le :  mer. 22 avr. 2020 à 09:11
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `je_me_propose`
 --
+CREATE DATABASE IF NOT EXISTS `je_me_propose` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `je_me_propose`;
 
 -- --------------------------------------------------------
 
