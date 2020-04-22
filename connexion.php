@@ -1,20 +1,16 @@
 <header>
-
-<ul>
-				<li><a href="../index.php">Accueil</a></li>
-				<li><a href="inscription.php">Inscription</a></li>
-</ul>
-			
+	<?php include "header.php"; ?>
 </header>
 
 
 
 <?php	
 // --------------------------------------------DEBUT PHP--------------------------------------------
-session_start();
+//session_start();
 
 if(!isset($_SESSION['id']))
 {
+
 if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'])))
 {
 
@@ -23,12 +19,13 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 	$query="SELECT *from utilisateurs WHERE login='$login'";
 	$result= mysqli_query($connexion, $query);
 	$row = mysqli_fetch_array($result);
+
 	
 	if(password_verify($_POST['champ2'],$row['password'])) 
 	{
+	$login= htmlspecialchars($_POST['login']);	
 	$_SESSION['login'] = $_POST['champ1'];
-	$_SESSION['password'] = $_POST['champ2'];
-	header ('location: index.php');
+	$_SESSION['id'] = $row['id'];
 	}
 	else
 	{	
@@ -44,7 +41,7 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 	<?php
 	}
 }
-
+var_dump($row['id']);
 // --------------------------------------------FIN PHP--------------------------------------------
 ?>
 	
@@ -71,7 +68,7 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 }
 else
 {
-	header('location: index.php');
+header("location: header.php");
 }
 ?>	
 </body>
