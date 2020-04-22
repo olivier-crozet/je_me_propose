@@ -26,9 +26,10 @@
 
 h1
 {
-	text-align: center;
-	animation-duration: 1.5s;
-	animation-name: flipInX;
+  text-align: center;
+  animation-duration: 1.5s;
+  animation-name: flipInX;
+  color: #2F3A4B;
 }
 
 form
