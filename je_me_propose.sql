@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 22 avr. 2020 à 09:11
+-- Généré le :  mer. 22 avr. 2020 à 09:21
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -48,6 +48,8 @@ CREATE TABLE IF NOT EXISTS `dispo` (
 DROP TABLE IF EXISTS `utilisateurs`;
 CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `age` int(11) NOT NULL,
   `sexe` varchar(255) NOT NULL,
   `region` varchar(255) NOT NULL,
