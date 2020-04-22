@@ -23,22 +23,31 @@
 
         </header>
 
+        
         <main>
             <div class="container-principal">
                 <!-- bloc1 -->
                 <div class="block-items-1">
+                    <h2>Le masque de protection:</h2>
                     <img src="pics/img/infos-masque.png" alt="masque de protection">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error doloremque perferendis quae tempore repellat porro quisquam veritatis! Veniam, aliquid reprehenderit recusandae, possimus facilis iusto vel cum, assumenda ex eaque ratione.</p>
+                    <p>Le masque anti-projections (de type « chirurgical »)
+                        . Destiné à éviter lors de l’expiration de celui qui le porte, la projection de sécrétions des voies aériennes
+                        supérieures ou de salive pouvant contenir des agents infectieux transmissibles :
+                        - par voie de gouttelettes (transmission par des gouttelettes de salive ou de sécrétions des voies
+                        aériennes supérieures) ;</p>
                 </div>
                 <!-- bloc2 -->
                 <div class="block-items-2">
-                <img src="pics/img/infos-gants.png" alt="masque de protection">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error doloremque perferendis quae tempore repellat porro quisquam veritatis! Veniam, aliquid reprehenderit recusandae, possimus facilis iusto vel cum, assumenda ex eaque ratione.</p>
+                    <h2>Les gants de protections:</h2>
+                    <img src="pics/img/infos-gants.png" alt="masque de protection">
+                    <p>Le port de gants permet : de protéger de toutes les agressions mécaniques ou chimiques. de limiter le contact avec des agents allergisants ou infectieux et leur portage.</p>
                 </div>;
                 <!-- bloc3 -->
                 <div class="block-items-3">
-                <img src="pics/img/moyens-de-locomotions.png" alt="masque de protection">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error doloremque perferendis quae tempore repellat porro quisquam veritatis! Veniam, aliquid reprehenderit recusandae, possimus facilis iusto vel cum, assumenda ex eaque ratione.</p>
+                    <h2>Moyens de locomotions:</h2>
+                    <img src="pics/img/moyens-de-locomotions.png" alt="masque de protection">
+                    <a href="https://media.interieur.gouv.fr/deplacement-covid-19/" target="_blank">N'oubliez pas votre attestation!</a>
+                    <p>Les moyens de transport sont : – individuels : la voiture, la moto, le scooter, le vélo ; – collectifs : le bus, le car, le tramway, le métro, le train, le bateau, l'avion. ... – interurbains : ils permettent de se déplacer d'une ville à l'autre (car, train, bateau, avion)</p>
                 </div>
             </div>
         </main>
