@@ -9,7 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Je propose mon aide</title>
-	<link rel="stylesheet" type="text/css" href="../css/proposer_mon_aide.css">
+	<link rel="stylesheet" type="text/css" href="css/proposer_mon_aide.css">
 </head>
 <header>
     <?php //header dans une page dedier
