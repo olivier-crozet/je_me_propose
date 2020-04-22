@@ -53,6 +53,13 @@ footer{
     grid-area: footer;
     margin-top: 20px;
 }
+footer a {
+    color: black;
+    text-decoration: none;
+}
+footer a:hover{
+    opacity: 0.3;
+}
 @media screen and (min-width:1200px){
    
     #container-mise-en-page{

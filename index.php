@@ -77,8 +77,10 @@
         <footer class="block-accueil">
             <ul>
                 <li><a href="">Accueil</a></li>
+                <li><a href="">Connexion</a></li>
+                <li><a href="">Inscription</a></li>
+                <li><a href="">Informations</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href="">Aide</a></li>
             </ul>
         </footer>
 
