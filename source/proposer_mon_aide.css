@@ -41,11 +41,6 @@ animation-name: flipInX;
 background-color: rgb(34, 206, 157);
 }
 
-select, option
-{
- background-color:#FFF3F3;
-}
-
 select
 {
  padding:3px;
