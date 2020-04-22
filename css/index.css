@@ -11,7 +11,6 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: arial, sans-serif;
 }
 body p, li, blockquote{
     color:var(--secondaryColor);
@@ -35,15 +34,6 @@ header{
 article{
     grid-area: article;
     margin-bottom: 20px;
-}
-nav {
-    background-color: blue;
-    grid-area: nav;
-}
-.nav-2{
-    background-color: yellowgreen;
-    grid-area: nav-2;
-    margin-top: 20px;
 }
 aside{
     grid-area: aside;

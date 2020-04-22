@@ -79,7 +79,7 @@
         </aside>
         <footer class="block-accueil">
             <ul>
-                <li><a href="index.html">accueil</a></li>
+                <li><a href="infos.php">accueil</a></li>
                 <li><a href="">connexion</a></li>
                 <li><a href="">inscription</a></li>
                 <li><a href="">informations</a></li>
