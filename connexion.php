@@ -41,7 +41,6 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 	<?php
 	}
 }
-var_dump($row['id']);
 // --------------------------------------------FIN PHP--------------------------------------------
 ?>
 	
