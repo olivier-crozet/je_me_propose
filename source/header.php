@@ -4,7 +4,7 @@ session_start();
 
 
 
-	<a href="index.php">acceuil</a>
+	<a href="index.php">accueil</a>
 	<?php 
 	if (isset($_SESSION['id']))
 	 { ?>
