@@ -10,8 +10,11 @@
 
 <body>
     <div id="container-mise-en-page">
-        <header class="block-accueil">HEADER</header>
-        <nav class="block-accueil">NAV</nav>
+        <header class="block-accueil">
+        <?php include "source/header.php";  ?>
+
+        </header>
+
         <article class="block-accueil">
 
             <p>Cliquez, Vivez, <span>Aidez</span>.</p>
@@ -43,7 +46,6 @@
             </div>
         </aside>
         <footer class="block-accueil">FOOTER</footer>
-        <div class="block-accueil nav-2">NAV-2</div>
 
     </div>
 

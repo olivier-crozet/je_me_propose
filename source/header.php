@@ -3,7 +3,7 @@ session_start();
 ?>
 
 
-<header>
+
 	<a href="index.php">acceuil</a>
 	<?php 
 	if (isset($_SESSION['id']))
@@ -20,4 +20,3 @@ session_start();
 
 	?>
 	<a href="">contact</a>
-</header>

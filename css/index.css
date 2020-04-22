@@ -49,13 +49,13 @@ footer{
         width:100%;
         display: grid;
         grid-gap:5px;
-        grid-template-columns: 3fr 1fr;
-        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px  2fr 2fr  100px;
         grid-template-areas: 
-            "header nav"
-            "article article"
-            "aside aside"
-            "footer nav-2";
+            "header "
+            "article "
+            "aside "
+            "footer ";
     }
     
 
@@ -66,19 +66,22 @@ footer{
         display: grid;
         grid-gap:5px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
+        grid-template-rows: 100px  2fr 2fr  100px;
         grid-template-areas: 
-            "header header"
-            "nav nav"
-            "article article"
-            "aside aside"
-            "nav-2 nav-2"
-            "footer footer";
+            "header "
+            "article "
+            "aside "
+            "footer ";
     }
     footer {
-    margin-top: 0;
+    margin-top: 10px;
     }
     
+}
+/*HEADER*/
+
+header a{
+    text-decoration: none;
 }
 
 /*ARTICLE*/
@@ -133,12 +136,14 @@ aside figure figcaption::after{
 aside img{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
+    border:3px dashed #ffffff00;
     width: 92%;
-    background-color: rgb(34, 206, 157);
+    background-color: var(--primaryColor);
     transition: 0.3s;
 }
 aside img:hover{
     border:3px dashed white;
+
 }
 .accueil-liste-regions{
     background-color: var(--primaryColor);
@@ -149,6 +154,7 @@ aside img:hover{
     padding: 10px;
     line-height: 25px;
     height: fit-content;
+    border:3px dashed #ffffff00;
 }
 .accueil-liste-regions li{
     list-style: none;
@@ -168,14 +174,12 @@ aside img:hover{
         display: grid;
         grid-gap:5px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
+        grid-template-rows: 100px  2fr 2fr  100px;
         grid-template-areas: 
-            "header header"
-            "nav nav"
-            "article article"
-            "aside aside"
-            "nav-2 nav-2"
-            "footer footer";
+            "header"
+            "article"
+            "aside"
+            "footer";
     }
     footer{
         margin-top:0;
@@ -192,7 +196,7 @@ aside img:hover{
         border-radius: 10px;
         transition: 0.3s;
         padding: 10px;
-        margin-top: 15px;
+        margin: 15px 0;
         line-height: 25px;
         width:85%;
     }
