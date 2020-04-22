@@ -1,13 +1,44 @@
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
 h1
 {
 	text-align: center;
+	animation-duration: 1.5s;
+	animation-name: flipInX;
 }
 
 form
 {
  padding:10px;
- width:100px;
+ width:280px;
  margin: auto;
+ animation-duration: 1.5s;
+animation-name: flipInX;
+background-color: rgb(34, 206, 157);
 }
 
 select, option
