@@ -7,9 +7,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Je propose mon aide</title>
-	<link rel="stylesheet" type="text/css" href="css/proposer_mon_aide.css">
+    <meta charset="utf-8">
+    <title>Je propose mon aide</title>
+    <link rel="stylesheet" type="text/css" href="css/proposer_mon_aide.css">
 </head>
 <header>
     <?php //header dans une page dedier
@@ -17,11 +17,11 @@
      ?>
 </header>
 <body>
-	<main>
-		<h1><?php  ecrire_login_by_id()  ?> proposez votre aide</h1>
-		<form method="post" action="" >
-		<!-- Département -->
-		<label for="Region">Votre région</label>
+    <main>
+        <h1><?php  ecrire_login_by_id()  ?> proposez votre aide</h1>
+        <form method="post" action="" >
+        <!-- Département -->
+        <label for="Region">Votre région</label>
         <select name="Region" id="Region">
             <option value="Grand-Est">Grand-Est</option>
             <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
@@ -73,10 +73,10 @@
         <input type="text_aera" name="raison">
         <input type="submit" name="validation_dispo" value="Valider">
         
-	</form>
+    </form>
     <?php
     insertion_aidant()
     ?>
-	</main>
+    </main>
 </body>
 </html>

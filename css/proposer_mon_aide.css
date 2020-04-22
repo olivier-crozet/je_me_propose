@@ -62,8 +62,9 @@ input[type=radio]
  border:none;
 }
 
-textarea
+input[type=text_aera]
 {
-  width: 270px;
-  height: 400px;
+ height:400px;
+ width: 270px;
+ margin-bottom: 1.5em;
 }
