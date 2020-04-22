@@ -3,7 +3,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['login']))
+if(!isset($_SESSION['id']))
 {
 ?>
 
@@ -133,9 +133,7 @@ if(!empty($_POST['Valider']))
 
 			mysqli_query($connexion, $req2);		 
 			mysqli_close($connexion);
-			//header('Location: connexion.php');	
-			
-			var_dump($req2);
+			header('Location: connexion.php');	
 	}
 }
 // --------------------------------------------FIN PHP--------------------------------------------
