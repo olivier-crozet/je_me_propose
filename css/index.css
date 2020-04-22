@@ -89,7 +89,7 @@ article{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(pics/img/help-people.png);
+    background-image: url(../pics/img/help-people.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
