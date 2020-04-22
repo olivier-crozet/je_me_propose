@@ -1,24 +1,36 @@
-form {
+h1
+{
+	text-align: center;
+}
+
+form
+{
  padding:10px;
  width:100px;
  margin: auto;
- }
+}
 
-
-select, option {
+select, option
+{
  background-color:#FFF3F3;
- }
-select {
+}
+
+select
+{
  padding:3px;
  border:1px solid #F5C5C5;
  border-radius:5px;
  width:200px;
  box-shadow:1px 1px 2px #C0C0C0 inset;
- }
-select {
+}
+
+select
+{
  margin-top:10px;
- }
-input[type=radio] {
+}
+
+input[type=radio]
+{
  background-color:transparent;
  border:none;
- }
+}
