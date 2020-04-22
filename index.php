@@ -25,7 +25,7 @@
 
         <article class="block-accueil">
 
-            <p>Cliquez, Vivez, <span>Aidez</span>.</p>
+            <p>Aidez</p>
             <div class="accueil-bg-opacity">
             </div>
         </article>
@@ -74,7 +74,15 @@
                 </div>
             </div>
         </aside>
-        <footer class="block-accueil">FOOTER</footer>
+        <footer class="block-accueil">
+            <ul>
+                <li><a href="index.html">accueil</a></li>
+                <li><a href="">connexion</a></li>
+                <li><a href="">inscription</a></li>
+                <li><a href="">informations</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </footer>
 
     </div>
 
