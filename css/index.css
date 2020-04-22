@@ -23,7 +23,6 @@ header{
     grid-area: header;
 }
 article{
-    background-color: #34495e;
     grid-area: article;
     margin-bottom: 20px;
 }
@@ -37,7 +36,6 @@ nav {
     margin-top: 20px;
 }
 aside{
-    /* background-color: yellowgreen; */
     grid-area: aside;
 }
 footer{
@@ -94,11 +92,11 @@ article{
     background-size: cover;
     background-repeat: no-repeat;
 }
-.black{
+.accueil-bg-opacity{
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity:0.3;
+    background-color: white;
+    opacity:0.15;
 }
 article img{
     width:100%;
@@ -111,13 +109,14 @@ article p{
     font-weight: bold;
 }
 article span{
-    color:yellowgreen;
+    color:var(--primaryColor);
 }
 
 /*ASIDE*/
 aside{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 aside figure{
     margin:0;
@@ -134,27 +133,32 @@ aside figure figcaption::after{
 aside img{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
-    width: 50%;
-    background-color: rgb(4, 60, 125);
+    width: 92%;
+    background-color: rgb(34, 206, 157);
     transition: 0.3s;
 }
 aside img:hover{
-    border:5px double rgb(46, 100, 154);
+    border:3px dashed white;
 }
-.accueil-liste-arrondissements{
-    background-color: rgb(4, 60, 125);
+.accueil-liste-regions{
+    background-color: var(--primaryColor);
     border: 0px solid black;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
     transition: 0.3s;
     padding: 10px;
     line-height: 25px;
+    height: fit-content;
 }
-.accueil-liste-arrondissements li{
+.accueil-liste-regions li{
     list-style: none;
+    text-align: center;
 }
-.accueil-liste-arrondissements:hover{
-    border:3px dashed rgb(46, 100, 154);
+.accueil-liste-regions ul{
+    padding: 0;
+}
+.accueil-liste-regions:hover{
+    border:3px dashed white;
 }
 
 /*MEDIAS*/
@@ -181,14 +185,21 @@ aside img:hover{
         flex-direction: column;
         align-items: center;
     }
-    .accueil-liste-arrondissements{
-        background-color: rgb(4, 60, 125);
+    .accueil-liste-regions{
+        background-color: var(--primaryColor);
         border: 0px solid black;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         border-radius: 10px;
         transition: 0.3s;
         padding: 10px;
+        margin-top: 15px;
         line-height: 25px;
-        width:25%;
+        width:85%;
     }
+}
+
+/*VAR*/
+
+:root{
+    --primaryColor:rgb(34, 206, 157);
 }
