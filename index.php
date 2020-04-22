@@ -25,7 +25,7 @@
 
         <article class="block-accueil">
 
-            <p>Cliquez, Vivez, <span>Aidez</span>.</p>
+            <p>Nous proposons des services d’aide à la personne dans tout la <span>France métropolitaine</span> spécialement pensés pour apporter une solution sur-mesure et répondant parfaitement aux besoins des personnes isolées.<br/> L’aide à domicile par <span>Je me propose</span>, c’est la certitude d’avoir un suivi personnalisé et des prestations adaptées à vos besoins spécifiques.<br/>Autre point important : votre site <span>Je me propose</span> est votre unique interlocuteur. Après avoir pris connaissance des besoins de la personne isolée, il vous proposera une liste de personnes disponibles à proximité. C’est vous qui choisirez la personne ayant le profil idéal pour exercer l’aide à domicile dans les meilleures conditions possibles.</p>
             <div class="accueil-bg-opacity">
             </div>
         </article>
