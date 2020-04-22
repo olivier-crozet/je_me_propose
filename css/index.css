@@ -1,0 +1,194 @@
+/*MISE EN PAGE*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.block-accueil{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-family:arial;
+}
+
+header{
+    background-color: #2c3e50;
+    grid-area: header;
+}
+article{
+    background-color: #34495e;
+    grid-area: article;
+    margin-bottom: 20px;
+}
+nav {
+    background-color: blue;
+    grid-area: nav;
+}
+.nav-2{
+    background-color: yellowgreen;
+    grid-area: nav-2;
+    margin-top: 20px;
+}
+aside{
+    /* background-color: yellowgreen; */
+    grid-area: aside;
+}
+footer{
+    background-color: #bdc3c7;
+    grid-area: footer;
+    margin-top: 20px;
+}
+@media screen and (min-width:1200px){
+   
+    #container-mise-en-page{
+        width:100%;
+        display: grid;
+        grid-gap:5px;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-areas: 
+            "header nav"
+            "article article"
+            "aside aside"
+            "footer nav-2";
+    }
+    
+
+}
+
+@media screen and (min-width:780px) and (max-width:1199px){
+    #container-mise-en-page{
+        display: grid;
+        grid-gap:5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "article article"
+            "aside aside"
+            "nav-2 nav-2"
+            "footer footer";
+    }
+    footer {
+    margin-top: 0;
+    }
+    
+}
+
+/*ARTICLE*/
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(pics/img/help-people.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.black{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity:0.3;
+}
+article img{
+    width:100%;
+    height:100%;
+}
+article p{
+    position: absolute;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+article span{
+    color:yellowgreen;
+}
+
+/*ASIDE*/
+aside{
+    display: flex;
+    justify-content: space-around;
+}
+aside figure{
+    margin:0;
+}
+aside figure figcaption{
+    color: black;
+}
+aside figure figcaption::before{
+    content:"<<"
+}
+aside figure figcaption::after{
+    content:">>"
+}
+aside img{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    width: 50%;
+    background-color: rgb(4, 60, 125);
+    transition: 0.3s;
+}
+aside img:hover{
+    border:5px double rgb(46, 100, 154);
+}
+.accueil-liste-arrondissements{
+    background-color: rgb(4, 60, 125);
+    border: 0px solid black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 10px;
+    line-height: 25px;
+}
+.accueil-liste-arrondissements li{
+    list-style: none;
+}
+.accueil-liste-arrondissements:hover{
+    border:3px dashed rgb(46, 100, 154);
+}
+
+/*MEDIAS*/
+
+@media screen and (max-width:779px){
+    #container-mise-en-page{
+        display: grid;
+        grid-gap:5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "article article"
+            "aside aside"
+            "nav-2 nav-2"
+            "footer footer";
+    }
+    footer{
+        margin-top:0;
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .accueil-liste-arrondissements{
+        background-color: rgb(4, 60, 125);
+        border: 0px solid black;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 10px;
+        transition: 0.3s;
+        padding: 10px;
+        line-height: 25px;
+        width:25%;
+    }
+}
