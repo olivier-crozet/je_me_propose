@@ -25,14 +25,17 @@
 
         <article class="block-accueil">
 
-            <p>Aidez</p>
+            <p>Cliquez, Vivez, <span>Aidez</span>.</p>
             <div class="accueil-bg-opacity">
             </div>
         </article>
         <aside class="block-accueil">
+            <p class="accueil-p-marge">Nous proposons des services d’aide à la personne dans toute la <strong>France métropolitaine</strong> spécialement pensés pour apporter une solution sur-mesure et répondant parfaitement aux besoins des personnes isolées. </p>
+            <p class="accueil-p-marge">L’aide à domicile par <strong>Je-me-propose</strong>, c’est la certitude d’avoir un suivi personnalisé et des prestations adaptées à vos besoins spécifiques.</p>
+            <p class="accueil-p-marge">Autre point important : votre site <strong>Je-me-propose</strong> est votre unique interlocuteur. Après avoir pris connaissance des besoins de la personne isolée, il vous proposera un planning de prestations d’aide à la personne adapté. C’est vous qui choisirez l’auxiliaire de vie ayant le profil idéal pour exercer l’aide à domicile dans les meilleures conditions possibles.</p>
             <div class="accueil-aside-flex-container">
                 <figure>
-                    <figcaption>Les arrondissements de la ville de Marseille</figcaption>
+                    <figcaption>Les régions de <span id="accueil-blue-france">Fr</span><span id="accueil-white-france">an</span><span id="accueil-red-france">ce</span></figcaption>
                     <img id="carte-region-de-france" src="pics/img/accueil-france-region.png" alt="carte région de france" title="Régions de France">
                 </figure>
                 <div class="accueil-liste-regions">

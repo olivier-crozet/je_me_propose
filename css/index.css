@@ -164,6 +164,27 @@ article span{
 aside figure{
     margin:0;
 }
+aside figcaption{
+    background-color: var(--primaryColor);
+    width: fit-content;
+    margin: auto;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+#accueil-blue-france{
+    color:blue;
+}
+#accueil-white-france{
+    color: white;
+}
+#accueil-red-france{
+    color: red;
+}
+
+.accueil-p-marge{
+    margin: 10px;
+}
 aside figure figcaption{
     color: var(--secondaryColor);
 }
@@ -335,6 +356,9 @@ footer li{
         margin: 15px 0;
         line-height: 25px;
         width:85%;
+    }
+    .accueil-p-marge{
+        margin: 3em;
     }
     .people-care{
         display: flex;
