@@ -74,7 +74,13 @@
                 </div>
             </div>
         </aside>
-        <footer class="block-accueil">FOOTER</footer>
+        <footer class="block-accueil">
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Aide</a></li>
+            </ul>
+        </footer>
 
     </div>
 
