@@ -32,11 +32,12 @@ h1
   color: #2F3A4B;
 }
 
-form
+.couleur
 {
  padding:10px;
- width:280px;
+ width:300px;
  margin: auto;
+ border-radius: 1rem;
  animation-duration: 1.5s;
 animation-name: flipInX;
 background-color: rgb(34, 206, 157);
@@ -60,11 +61,4 @@ input[type=radio]
 {
  background-color:transparent;
  border:none;
-}
-
-input[type=text_aera]
-{
- height:400px;
- width: 270px;
- margin-bottom: 1.5em;
 }

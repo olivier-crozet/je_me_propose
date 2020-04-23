@@ -13,14 +13,18 @@ include "fonction_demandeur.php";
 	<meta charset="utf-8">
 	<title>Demander de l'aide</title>
 	<link rel="stylesheet" type="text/css" href="../css/demande_aide.css">
+    <link rel="stylesheet" type="text/css" href="../css/accueil.css">
 </head>
 <body>
-    <header>
-        <?php
-        include "header.php";
-        securiter();
-        ?>
-    </header>
+    <div class="header-logo-title">
+            <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+            <h1>Je-me-propose.com</h1>
+        </div>
+
+        <header class="block-accueil">
+            <?php include "../source/header.php";  ?>
+
+        </header>
 	<main>
 		<h1>Demandez de l'aide</h1>
 		<form class="couleur" method="post" action="">
@@ -75,18 +79,22 @@ include "fonction_demandeur.php";
         <!-- Raisons -->
         <label for="Raisons">Raison</label><br/>
         <textarea></textarea>
-        <input type="submit" name="validation_help" value="validé">
+        <input type="submit" name="validation_help" value="Valider">
 	</form>
     
 
         <table>
         <thead>
-            <tr>age</tr><tr>sexe</tr><tr>ville</tr><tr>tel</tr><tr>region</tr><tr>date</tr><tr>heure</tr><tr>description</tr>
+            <tr>Pseudo</tr><tr>age</tr><tr>sexe</tr><tr>ville</tr><tr>tel</tr><tr>region</tr><tr>date</tr><tr>heure</tr><tr>description</tr>
         </thead>
 <?php
     recherche();
     ?>
 	</main>
+
+    <footer class="block-accueil">
+            <?php include "footer.php";  ?>
+        </footer>
 	
 </body>
 </html>

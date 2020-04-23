@@ -11,16 +11,21 @@
     <meta charset="utf-8">
     <title>Je propose mon aide</title>
     <link rel="stylesheet" type="text/css" href="../css/proposer_mon_aide.css">
+    <link rel="stylesheet" type="text/css" href="../css/accueil.css">
 </head>
-<header>
-    <?php //header dans une page dedier
-     include"header.php"; 
-     ?>
-</header>
 <body>
+    <div class="header-logo-title">
+            <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+            <h1>Je-me-propose.com</h1>
+        </div>
+
+        <header class="block-accueil">
+            <?php include "../source/header.php";  ?>
+
+        </header>
     <main>
         <h1><?php  ecrire_login_by_id()  ?> proposez votre aide</h1>
-        <form method="post" action="" >
+        <form class="couleur" method="post" action="" >
         <!-- Département -->
         <label for="Region">Votre région</label>
         <select name="Region" id="Region">
@@ -79,5 +84,8 @@
     insertion_aidant()
     ?>
     </main>
+    <footer class="block-accueil">
+            <?php include "footer.php";  ?>
+        </footer>
 </body>
 </html>

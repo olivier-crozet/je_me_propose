@@ -4,6 +4,7 @@
 
 function recherche()
 {
+	$_SESSION["id"]=1;
 	if (isset($_POST['validation_help']))
 	 {
 	 	$region = $_POST['Region'];
@@ -33,7 +34,7 @@ function recherche()
 	 	for ($i=0; $i < $compte ; $i++) 
 	 	{ 
 	 		
-	 		echo "<tr><td>".$result[$i][1],$result[$i][2],$result[$i][3],$result[$i][4],$result[$i][5],$result[$i][6].$result[$i][7],$result[$i][8]."</td></tr>";
+	 		echo "<tr class'tab_css'><td class'tab_css'>".$result[$i][0].$result[$i][1],$result[$i][2],$result[$i][3],$result[$i][4],$result[$i][5],$result[$i][6].$result[$i][7],$result[$i][8]."</td></tr>";
 	 		
 	 	}
 
