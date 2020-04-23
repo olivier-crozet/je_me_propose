@@ -22,10 +22,14 @@ function insertion_aidant()
 			   	$region = $_POST['Region'];
 			   	$date =  $_POST['Date_dispo'];
 			   	$heure = $_POST['heure_dispo'];
+			   	//recuperation du time stamp de la date
+			   	$datest = strtotime($date);
+
 			   	$description = htmlspecialchars($_POST['raison']);
 			   	$connexion=mysqli_connect("localhost","root","","je_me_propose");
-			   	$requette_insretion_bdd_dispo = " INSERT INTO dispo (id_user,region,date_dispo,heure_dispo,description) VALUES ($id,'$region','$date',$heure,'$description')"	;
+			   	$requette_insretion_bdd_dispo = " INSERT INTO dispo (id_user,region,date_dispo,heure_dispo,description,date_st) VALUES ($id,'$region','$date',$heure,'$description',$datest)"	;
 			   	$execution = mysqli_query($connexion,$requette_insretion_bdd_dispo);
+			
 			//   	header("location:profil.php");		
 			   }
 			   else
@@ -50,7 +54,7 @@ function insertion_aidant()
 //select login
 function ecrire_login_by_id()
 {
-	$_SESSION['id']= 1;
+	
 $id = $_SESSION['id'];
  $connexion=mysqli_connect("localhost","root","","je_me_propose");
  $requette_select_login = "SELECT login FROM utilisateurs where id =$id ";
