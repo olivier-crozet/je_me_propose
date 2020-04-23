@@ -1,49 +1,52 @@
 <?php 
 
- include "fonction_aidant.php";
-//////////verifier si la personne est connecter/////
-  //  securiter();
+
+include "fonction_demandeur.php";
+
+
 
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <title>Je propose mon aide</title>
-    <link rel="stylesheet" type="text/css" href="../css/proposer_mon_aide.css">
+	<meta charset="utf-8">
+	<title>Demander de l'aide</title>
+	<link rel="stylesheet" type="text/css" href="../css/demande_aide.css">
 </head>
-<header>
-    <?php //header dans une page dedier
-     include"header.php"; 
-     ?>
-</header>
 <body>
-    <main>
-        <h1><?php  ecrire_login_by_id()  ?> proposez votre aide</h1>
-        <form method="post" action="" >
-        <!-- Département -->
-        <label for="Region">Votre région</label>
+    <header>
+        <?php
+        include "header.php";
+        securiter();
+        ?>
+    </header>
+	<main>
+		<h1>Demandez de l'aide</h1>
+		<form method="post" action="">
+		<!-- Département -->
+		<label for="Region">Votre région</label>
         <select name="Region" id="Region">
             <option value="Grand-Est">Grand-Est</option>
             <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
             <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
             <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
             <option value="Bretagne">Bretagne</option>
-            <option value="c">Centre-Val de Loire</option>
-            <option value="Centre-Val de looire">Corse</option>
+            <option value="Centre-Val de Loire">Centre-Val de Loire</option>
+            <option value="Corse">Corse</option>
             <option value="Hauts-de-France">Hauts-de-France</option>
             <option value="Ile-de-France">Ile-de-France</option>
             <option value="Occitanie">Occitanie</option>
             <option value="Normandie">Normandie</option>
-            <option value="Pays de la loire">Pays de la Loire</option>
+            <option value="pays de la Loire">Pays de la Loire</option>
             <option value="Provence-Alpes-Côtes d Azur">Provence-Alpes-Côtes d'Azur</option>
         </select><br/>
         <!-- Date -->
-        <label for="Date_dispo">Date de disponibilité</label>
+        <label for="Date_dispo">Date de demande d'aide</label>
         <input type="date" id="Date_dispo" name="Date_dispo"><br/>
         <!-- Heure -->
-        <label for="Heure_dispo">Heure de disponibilité</label>
-        <select name="heure_dispo">
+        <label for="Heure_dispo">Heure de demande d'aide</label>
+       <select name="Heure_dispo" type="number">
             <option value="0">00:00</option>
             <option value="1">01:00</option>
             <option value="2">02:00</option>
@@ -71,13 +74,19 @@
         </select><br/>
         <!-- Raisons -->
         <label for="Raisons">Raison</label><br/>
-        <input type="text_aera" name="raison">
-        <input type="submit" name="validation_dispo" value="Valider">
-        
-    </form>
-    <?php
-    insertion_aidant()
+        <textarea></textarea>
+        <input type="submit" name="validation_help" value="validé">
+	</form>
+    
+
+        <table>
+        <thead>
+            <tr>age</tr><tr>sexe</tr><tr>ville</tr><tr>tel</tr><tr>region</tr><tr>date</tr><tr>heure</tr><tr>description</tr>
+        </thead>
+<?php
+    recherche();
     ?>
-    </main>
+	</main>
+	
 </body>
 </html>
