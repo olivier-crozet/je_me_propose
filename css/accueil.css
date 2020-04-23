@@ -11,7 +11,6 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: arial, sans-serif;
 }
 body p, li, blockquote{
     color:var(--secondaryColor);
@@ -36,20 +35,11 @@ article{
     grid-area: article;
     margin-bottom: 20px;
 }
-nav {
-    background-color: blue;
-    grid-area: nav;
-}
-.nav-2{
-    background-color: yellowgreen;
-    grid-area: nav-2;
-    margin-top: 20px;
-}
 aside{
     grid-area: aside;
 }
 footer{
-    background-color: #bdc3c7;
+    background-color: var(--secondaryColor);
     grid-area: footer;
     margin-top: 20px;
 }
@@ -164,6 +154,27 @@ article span{
 aside figure{
     margin:0;
 }
+aside figcaption{
+    background-color: var(--primaryColor);
+    width: fit-content;
+    margin: auto;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+#accueil-blue-france{
+    color:blue;
+}
+#accueil-white-france{
+    color: white;
+}
+#accueil-red-france{
+    color: red;
+}
+
+.accueil-p-marge{
+    margin: 10px;
+}
 aside figure figcaption{
     color: var(--secondaryColor);
 }
@@ -265,6 +276,26 @@ aside figure figcaption::after{
     padding:10px;
     width: 75%;
 }
+/*FOOTER*/
+footer ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height:80%;
+}
+footer a{
+    color:var(--primaryColor);
+    transition: 0.3s;
+}
+footer a:hover{
+    color:var(--primaryColor);
+    opacity:0.7;
+}
+footer li{
+    list-style: none;
+}
 /*MEDIAS*/
 
 @media screen and (max-width:779px){
@@ -294,6 +325,11 @@ aside figure figcaption::after{
     }
     footer{
         margin-top:0;
+        height: fit-content;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: column;
     }
     .accueil-aside-flex-container{
         display: flex;
@@ -310,6 +346,9 @@ aside figure figcaption::after{
         margin: 15px 0;
         line-height: 25px;
         width:85%;
+    }
+    .accueil-p-marge{
+        margin: 3em;
     }
     .people-care{
         display: flex;
