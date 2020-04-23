@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+/* $_SESSION["id"]= 8; */
 include("fonction_oc.php");
 ?>
 
