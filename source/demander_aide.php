@@ -3,7 +3,7 @@
 
 include "fonction_demandeur.php";
 
-securiter();
+
 
 ?>
 
@@ -15,6 +15,12 @@ securiter();
 	<link rel="stylesheet" type="text/css" href="../css/demande_aide.css">
 </head>
 <body>
+    <header>
+        <?php
+        include "header.php";
+        securiter();
+        ?>
+    </header>
 	<main>
 		<h1>Demandez de l'aide</h1>
 		<form method="post" action="">

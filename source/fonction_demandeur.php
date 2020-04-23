@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 
 
 function recherche()
@@ -11,19 +11,30 @@ function recherche()
 	 	$datetoday = date("Y-m-d H:i:s");
 	 	//date actuel en timestamp
 	 	$today = strtotime($datetoday);
-	 	var_dump($datetoday);
+	
 	 	//heure par valeur
 	 	$heure =$_POST['Heure_dispo'];
-	 	var_dump($_POST['Heure_dispo']);
+	 	
 	 	//conversion de l'heure en timestamp
 	 	$date = $_POST['Date_dispo'];
 	 	$datestamp = strtotime($date);
 	 	$connexion=mysqli_connect("localhost","root","","je_me_propose");
 	 	$requette_cherche = "SELECT login, age , sexe, region, tel, ville FROM utilisateurs WHERE region = '$region' or 'heure_dispo' LIKE '%".$heure."%' or  'date_st' LIKE '%".$datestamp."%' ";
 	 	$fusion_requette_cherche =mysqli_query($connexion,$requette_cherche);
+	 	//metre tous les resultat dans un tableau
+	 	$result = mysqli_fetch_all($fusion_requette_cherche);
+	 	//nombre de resultat bdd
+	 	$compte = mysqli_num_rows($fusion_requette_cherche);
+
+	 	for ($i=0; $i < $compte ; $i++) 
+	 	{ 
+	 		echo "<div>".$result[$i][0],$result[$i][1],$result[$i][2],$result[$i][3],$result[$i][4],$result[$i][5]."</div>";
+	 	}
+	 	var_dump($compte);
 	 	var_dump($requette_cherche);
-	 	var_dump($fusion_requette_cherche);
-	 	
+	 	var_dump($result);
+
+
 	}
 
 

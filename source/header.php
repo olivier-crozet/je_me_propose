@@ -1,10 +1,12 @@
 <?php
 session_start();
+
+include("fonction_oc.php");
 ?>
 
 
 <header>
-	<a href="index.php">acceuil</a>
+	<a href="accueil.php">accueil</a>
 	<?php 
 	if (isset($_SESSION['id']))
 	 { ?>
@@ -14,10 +16,14 @@ session_start();
 <?php } 
 	else
 	{ ?>
-		<a href="">inscription</a>
+		<a href="inscription.php">inscription</a>
 		<a href="connexion">connexion</a>
 <?php }
 
 	?>
 	<a href="">contact</a>
+	<form action="" method="post">
+	<input type="submit" name="deco" value="déconnection"> 
+	<?php suprime() ?>
+	</form>
 </header>

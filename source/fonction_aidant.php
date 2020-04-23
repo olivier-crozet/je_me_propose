@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 //////////////FONCTION DE SECURITER (peut etre amelioré avec une requette)
 function securiter()

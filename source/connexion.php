@@ -1,135 +1,76 @@
-<?php
-session_start();
-               //si on clique sur la connexion
- if (!empty($_POST['formdeconexion']) OR !empty($_POST['deconection']))
-    {   	
-    unset ( $_SESSION ['id'] );
-    unset ($_SESSION['login']);	
-$erreur="<p class='codeerreur'>vous n'etes pas connecté !";
-    }
-?>
-
-<html>
-<head>
-	   <meta charset="utf-8">
-     <link rel="stylesheet" type="text/css" href="nav.css">
-     <link rel="stylesheet" type="text/css" href="css/index.css">
-     <link rel="stylesheet" type="text/css" href="css/connexion.css">
+<header>
+	<?php include "header.php"; ?>
+</header>
 
 
-     <title>futsal club connexion</title>
-</head>
-       <body class="oc-body-accueil-btp">
-  
 
-					 <!--HEADER ADMIN -->
-     <section class="section-deventure">      
-  <header class="oc-header-btp">
-  	
-  	</header>
-      
+<?php	
+// --------------------------------------------DEBUT PHP--------------------------------------------
+//session_start();
 
-<main>
-<?php
-  $connexion=mysqli_connect("localhost","root","","reservationsalles");
-if (isset($_POST['envoiconnexion'])) 
+if(!isset($_SESSION['id']))
 {
-        if (!empty($_POST['login']) && !empty($_POST['password']))
-          {
-            $login=htmlspecialchars($_POST['login']);
-            $login2=($_POST['login']);
-            $password= password_hash($_POST["password"], PASSWORD_DEFAULT,array('cost'=> 12));
 
+if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'])))
+{
 
-            //REQUETTE VERIFICATION
-            $requete=("SELECT * FROM utilisateurs  where login = '$login' ");
-            $sql=mysqli_query($connexion,$requete);
-            $retour=mysqli_fetch_array($sql);  
+	$connexion= mysqli_connect("localhost", "root", "", "je_me_propose"); 
+	$login=$_POST['champ1'];
+	$query="SELECT *from utilisateurs WHERE login='$login'";
+	$result= mysqli_query($connexion, $query);
+	$row = mysqli_fetch_array($result);
 
-            $reqid=("SELECT id FROM utilisateurs where login = '$login2' ");
-            $reqisql=mysqli_query($connexion,$reqid);
-            $bostring=mysqli_fetch_all($reqisql);
-
-                 if (password_verify($_POST['password'], $retour['password']))
-                 {
-                  $_SESSION['login']=$_POST['login'];
-                  $_SESSION['password']=$_POST['password'];
-                  $_SESSION['id']=$bostring[0][0];
-
-                  header("location: index.php");
-                }
-            else
-            {
-              echo "le mot de passe ou le login ne correspond pas !";
-            }
-          }
-   else
-   {
-    echo "remplissez tous les champs !";
-   }
+	
+	if(password_verify($_POST['champ2'],$row['password'])) 
+	{
+	
+	$_SESSION['login'] =htmlspecialchars($_POST['champ1']);;
+	$_SESSION['id'] = $row['id'];
+	}
+	else
+	{	
+	?>
+	<div class="erreur">
+	<img src="../img/erreur.jpg" width="2%">
+	<div class="affichage">
+	<?php
+	echo "*Login ou mot de passe incorrect";	
+	?>
+	</div>
+	</div>
+	<?php
+	}
 }
-
- //  BOUTON DECONNEXION
-
-   if (isset($_POST['envoideconnexion'])) 
-   {
-     unset($_SESSION['login']);
-     unset($_SESSION['password']);
-     header("location:index.php");
-   }
-   //FORMULAIRE CONNEXION
+// --------------------------------------------FIN PHP--------------------------------------------
 ?>
-  <form class="form-connexion" method="POST" action="connexion.php">
-         <table class="tableconnexionprofil">
-           <tr>
-            <td>
-              <label class="login"  for="login">login :</label>
-            </td>
-            <td>
-              <input class="login-connexion" type="text" name="login" ><!--php pour laisser le text dans l'input-->
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label class="mdp"  for="password">mot de passe :</label>
-            </td>
-            <td>
-              <input class="mdp" type="password" name="password" ><!--php pour laisser le text dans l'input-->
-            </td>
-          </tr>
-        </table> 
-        <br/>
-                <input class="envoi-connexion" type="submit" name="envoiconnexion" value="connexion">
-        <br/>
-                <input class="envoi-deconnexion" type="submit" name="envoideconnexion" value="déconnexion">   
+	
+<section>
+	<div class="form-style-5">
+		<form method="post" action="connexion.php">
+		<fieldset>
+		<legend>Connexion</legend>	
+		<div class="input">
+		<input type="text" name="champ1" placeholder="Login *">
+		</div>
+		<div class="input">
+		<input type="password" name="champ2" placeholder="Password *">
+		</div>
+		<div class="input">
+		<input type="submit" name="Valider" value="SE CONNECTER"/>
+		</div>
+		</fieldset>
+		</form>
+	</div>
+</section>				
 
-     </form>
-
-</main>
-            <!--FOOTER-->
-<footer>
-  <section class="oc-footer-navigation">
-  <div class="oc-container">
-   <h3 class="oc-menu">Menu</h3>
-    <div class="oc-columns">
-     <ul class="oc-nav2">
-      <li ><a class="oc-lien" href="index.php">accueil</a></li><!--
-  --> <li ><a class="oc-lien" href="connexion.php">planning</a></li>
-   
-      <li><a class="oc-lien" href="contact.php">contact</a></li>
-    
-   </div>
-  </div>
- <div class="oc-container">
-  <h3 class="oc-menu">sites utiles</h3>
-   <div class="oc-columns">
-    <ul class="oc-nav2">
-      <li ><a class="oc-lien" href="https://www.football365.fr/">foot365</a></li>
-      <li ><a class="oc-lien" href="mailto:olivier.crozet@laplateforme.io">mail</a></li>
-    </ul>
-   </div>
-  </div>
- </section>
-</footer>
+<?php
+}
+else
+{
+header("location: accueil.php");
+}
+?>	
 </body>
+
+
 </html>
