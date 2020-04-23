@@ -36,6 +36,7 @@ header{
     justify-content: space-evenly;
     align-items: center;
     background-color: rgb(34, 206, 157);
+    padding: 1em;
 }
 header a{
     text-decoration: none;
