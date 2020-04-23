@@ -1,19 +1,29 @@
 <html>
 
 <?php
-session_start();
 
 if (!isset($_SESSION['id'])) {
 ?>
 
 	<head>
-		<link href="inscription.css"rel="stylesheet">
+		<link href="inscription.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/inscription.css">
+		<link rel="stylesheet" type="text/css" href="../css/accueil.css">
+		<link rel="icon" type="image/png" href="../pics/icon/jeMePropose.png">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 		<title>Inscription</title>
 		<meta charset="UTF-8">
 	</head>
 
 	<body class="inscription">
-		<header>
+
+		<div class="header-logo-title">
+			<img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+			<h1>Je-me-propose.com</h1>
+		</div>
+
+		<header class="block-accueil">
+			<?php include "../source/header.php";  ?>
 
 		</header>
 
@@ -127,10 +137,10 @@ if (!isset($_SESSION['id'])) {
 
 
 
-		<section >
+		<section class="inscription-section-mt">
 			<div class="form-style-5">
-				<form method="post" action="inscription.php">
-					<fieldset>
+				<form class="inscription-form-ajust" method="post" action="inscription.php">
+					
 						<legend>Inscrivez-vous</legend>
 
 
@@ -155,7 +165,7 @@ if (!isset($_SESSION['id'])) {
 							</select>
 						</div>
 						<div>
-							Sélectionnez vôtre région :<br />
+							<p>Sélectionnez vôtre région :</p><br />
 							<select name="champ6" size="1">
 								<option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
 								<option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
@@ -184,7 +194,7 @@ if (!isset($_SESSION['id'])) {
 						<div class="input">
 							<input type="submit" name="Valider" value="S'INSCRIRE" />
 						</div>
-					</fieldset>
+					
 				</form>
 			</div>
 		</section>
