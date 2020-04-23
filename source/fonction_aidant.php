@@ -27,9 +27,9 @@ function insertion_aidant()
 
 			   	$description = htmlspecialchars($_POST['raison']);
 			   	$connexion=mysqli_connect("localhost","root","","je_me_propose");
-			   	$requette_insretion_bdd_dispo = " INSERT INTO dispo (id_user,region,date_dispo,heure_dispo,description,date_st) VALUES ($id,'$region','$date',$heure,'$description',$datest')"	;
+			   	$requette_insretion_bdd_dispo = " INSERT INTO dispo (id_user,region,date_dispo,heure_dispo,description,date_st) VALUES ($id,'$region','$date',$heure,'$description',$datest)"	;
 			   	$execution = mysqli_query($connexion,$requette_insretion_bdd_dispo);
-			  
+			
 			//   	header("location:profil.php");		
 			   }
 			   else
