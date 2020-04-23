@@ -5,7 +5,7 @@ include("fonction_oc.php");
 ?>
 
 
-<header>
+
 	<a href="accueil.php">accueil</a>
 	<?php 
 	if (isset($_SESSION['id']))
@@ -26,4 +26,3 @@ include("fonction_oc.php");
 	<input type="submit" name="deco" value="déconnection"> 
 	<?php suprime() ?>
 	</form>
-</header>
