@@ -32,11 +32,12 @@ h1
   color: #2F3A4B;
 }
 
-form
+.couleur
 {
  padding:10px;
- width:280px;
+ width:300px;
  margin: auto;
+ border-radius: 1rem;
  animation-duration: 1.5s;
 animation-name: flipInX;
 background-color: rgb(34, 206, 157);
@@ -66,4 +67,9 @@ textarea
 {
   width: 270px;
   height: 400px;
+}
+
+.tab_css
+{
+  border: 3px solid;
 }

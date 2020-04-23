@@ -6,30 +6,44 @@
 	<head>
 		   <meta charset="utf-8">
 		 <link rel="stylesheet" type="text/css" href="">
-		  <link rel="stylesheet" type="text/css" href="../css/header.css">
+		  
+       <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="icon" type="image/png" href="../pics/icon/jeMePropose.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/profil.css">
 		 <title>profil</title>
 	</head>
 		
 	<body class="oc-body-accueil-btp">
-  
-				<?php include('header.php'); 
+  <div class="header-logo-title">
+            <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+            <h1>Je-me-propose.com</h1>
+        </div>
+
+        <header class="block-accueil">
+            <?php include "header.php";  ?>
+
+        </header>
+				<?php 
         include('fonction_profil.php');
         ?>  
 
     <section class="section-deventure">    
-		<div>
+		<div class="oc-div-image">
        <?php 
 
       affichage_foto();
       ?>
     </div>
 
-    <div>
+    <div class="oc-div-infos">
       <?php 
 
       affichage_profil();
       ?>
     </div>
+    </section>
+    <section class="oc-tablinscri">
 <form class="form" method="POST" action="" enctype="multipart/form-data">
  
          
@@ -106,10 +120,10 @@ modif_profil($_SESSION['id']);
 }
   ?>
   
-  
+  </section>
 
  </main>
-     </section>
+     
   <!--//////////////////////////////////////////////////FOOTER///////////////////////////////////////////////////////////////////////-->
 
  
