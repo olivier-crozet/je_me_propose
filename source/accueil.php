@@ -81,7 +81,7 @@
             <ul>
                 <li><a href="accueil.php">accueil</a></li>
                 <li><a href="infos.php">informations</a></li>
-                <li><a href="connexion.html">connexion</a></li>
+                <li><a href="connexion.php">connexion</a></li>
                 <li><a href="inscription.php">inscription</a></li>
                 <li><a href="contact.php">contact</a></li>
             </ul>
