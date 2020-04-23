@@ -36,7 +36,7 @@
             <option value="Occitanie">Occitanie</option>
             <option value="Normandie">Normandie</option>
             <option value="Pays de la loire">Pays de la Loire</option>
-            <option value="Provence-Alpes-Côtes d'Azur">Provence-Alpes-Côtes d'Azur</option>
+            <option value="Provence-Alpes-Côtes d Azur">Provence-Alpes-Côtes d'Azur</option>
         </select><br/>
         <!-- Date -->
         <label for="Date_dispo">Date de disponibilité</label>

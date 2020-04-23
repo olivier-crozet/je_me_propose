@@ -39,7 +39,7 @@ include "fonction_demandeur.php";
             <option value="Occitanie">Occitanie</option>
             <option value="Normandie">Normandie</option>
             <option value="pays de la Loire">Pays de la Loire</option>
-            <option value="Provence-Alpes-Côtes d'Azur">Provence-Alpes-Côtes d'Azur</option>
+            <option value="Provence-Alpes-Côtes d Azur">Provence-Alpes-Côtes d'Azur</option>
         </select><br/>
         <!-- Date -->
         <label for="Date_dispo">Date de demande d'aide</label>
@@ -77,7 +77,13 @@ include "fonction_demandeur.php";
         <textarea></textarea>
         <input type="submit" name="validation_help" value="validé">
 	</form>
-    <?php
+    
+
+        <table>
+        <thead>
+            <tr>age</tr><tr>sexe</tr><tr>ville</tr><tr>tel</tr><tr>region</tr><tr>date</tr><tr>heure</tr><tr>description</tr>
+        </thead>
+<?php
     recherche();
     ?>
 	</main>
