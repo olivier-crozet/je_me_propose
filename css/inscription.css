@@ -22,6 +22,12 @@ form legend, option, p{
     padding:5px 5px
 }
 
+footer{
+  height: 75px;
+}
+footer li{
+  margin-top: 13px;
+}
 @keyframes flipInX {
     from {
       transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
