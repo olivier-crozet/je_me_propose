@@ -127,9 +127,9 @@ if(!empty($_POST['Valider']))
 			$region= htmlspecialchars($_POST['champ6']);
 			$tel= htmlspecialchars($_POST['champ7']);
 			$ville= htmlspecialchars($_POST['champ8']);
-
-			$req2 = "INSERT INTO utilisateurs(login,password,age,sexe,region,tel,ville)VALUES
-			('$login','$hash',$age,'$Sexe','$region','$tel','$ville')";
+			$image_par_defaut = "../profilPics/profil.jpg";
+			$req2 = "INSERT INTO utilisateurs(login,password,age,sexe,region,tel,ville,profilPic)VALUES
+			('$login','$hash',$age,'$Sexe','$region','$tel','$ville','$image_par_defaut')";
 
 			mysqli_query($connexion, $req2);		 
 			mysqli_close($connexion);
