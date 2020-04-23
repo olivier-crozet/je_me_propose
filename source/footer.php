@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include("fonction_oc.php");
 ?>
@@ -7,10 +6,11 @@ include("fonction_oc.php");
 
 
 
-	
+	<a href="index.php">accueil</a>
 
 	<a href="accueil.php">accueil</a>
-	<a href="infos.php">informations</a>
+
+	<a href="infos.php">Informations</a>
 
 	<?php 
 	if (isset($_SESSION['id']))
@@ -27,9 +27,5 @@ include("fonction_oc.php");
 
 	?>
 
-	<a href="contact.php">contact</a>
-	<form action="" method="post">
-	<input type="submit" name="deco" value="déconnection"> 
-	<?php suprime() ?>
-	</form>
+	<a href="">contact</a>
 
