@@ -23,7 +23,7 @@ include "fonction_demandeur.php";
     </header>
 	<main>
 		<h1>Demandez de l'aide</h1>
-		<form method="post" action="">
+		<form class="couleur" method="post" action="">
 		<!-- Département -->
 		<label for="Region">Votre région</label>
         <select name="Region" id="Region">
