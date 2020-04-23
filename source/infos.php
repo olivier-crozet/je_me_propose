@@ -55,6 +55,7 @@
         <footer class="block-accueil">
             <ul>
                 <li><a href="infos.php">accueil</a></li>
+                <li><a href="infos.php">informations</a></li>
                 <li><a href="">connexion</a></li>
                 <li><a href="">inscription</a></li>
                 <li><a href="">contact</a></li>
