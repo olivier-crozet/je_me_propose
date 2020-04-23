@@ -31,41 +31,66 @@
       ?>
     </div>
 <form class="form" method="POST" action="" enctype="multipart/form-data">
-  <table class="oc-tablinscri">
-          <tr>
-            <td>
+ 
+         
+         <div>
               <label  for="login">modifier le login :</label>
-        </td>
-        <td>
+        </div>
+          <div>
               <input type="text" name="login" placeholder="ecrire votre pseudo" value="<?php if(isset($login)){echo $login;} ?>">
-            </td>
-          </tr>
-           <tr>
-            <td>
+        </div>
+              <div>
               <label for="image">inserer votre image de profil : </label>
-            </td>
-            <td>
+              </div>
+              <div>
               <input type="file" name ="avatar" placeholder="">
-            </td>
-          </tr>
-          <tr>
-              <td>
-                
+            </div>
+                <div>
                 <label  for="password">modifier le mot de passe :</label>
-              </td>
-              <td>
+                </div>
+             <div>
                 <input type="password" name="password" placeholder="ecrire votre mot de passe">
-              </td>
-          </tr>
-          <tr>
-               <td>
+              </div>
                 <label  for="newpassword2">confirmer votre mot de passe :</label>
-              </td>
-              <td>
+                <div>
                 <input type="password" name="password2" placeholder="ecrire votre mot de passe">
-              </td>
-          </tr>
-          
+              </div>
+       
+          <div class="input">
+    <input type="number" name="Age" placeholder="Age *">
+    </div>
+    <div class="input">
+    <select name="sexe">
+      <option value="Homme">Homme</option>
+      <option value="Femme">Femme</option>
+    </select>
+    </div>
+    <div>
+      Sélectionnez vôtre région :<br/>
+      <select name="region" size="1">
+<option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
+<option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
+<option value="Bretagne">Bretagne</option>
+<option value="Centre-Val-de-Loire">Centre-Val-de-Loire</option>
+<option value="Corse">Corse</option>
+<option value="Grand-est">Grand-Est</option>
+<option value="Hauts-de-France">Hauts-de-France</option>
+<option value="Ile-de-france">Île-de-France</option>
+<option value="Normandie">Normandie</option>
+<option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+<option value="Occitanie">Occitanie</option>
+<option value="Pays-de-la-loire">Pays de la Loire</option>
+<option value="Provence-Alpes-Côte">Provence-Alpes-Côte d'Azur</option>
+</select>
+    </div>
+
+    <br/>
+    <div class="input">
+    <input type="text" name="tel" placeholder="Numéro de téléphone *">
+    </div>
+    <div class="input">
+    <input type="text" name="ville" placeholder="Ville *">
+    </div>
         </table>
         <br/>
                    <input  class="buton-inscription" type="submit" name="modif" value="modifier le profil !"/>

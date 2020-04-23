@@ -51,11 +51,12 @@ function modif_profil($lid)
        if (!empty($_POST['login']) && !empty($_POST['password']) && !empty($_POST['password2']) ) 
        {               
             if (($_POST['password']) == ($_POST['password2']))  
-                 {             echo "a";
+                 {            
                   $connexion=mysqli_connect("localhost","root","","je_me_propose");
                   $login= htmlspecialchars($_POST['login']);
                   $password= password_hash($_POST["password"], PASSWORD_DEFAULT,array('cost'=> 12));
-                  $reqdoublon = "SELECT login FROM `utilisateurs` where login =\"$login\";";
+
+                  $reqdoublon = "SELECT login, age, sexe, region, tel, ville FROM `utilisateurs` where login =\"$login\";";
                   $req=mysqli_query($connexion,$reqdoublon); 
                   $retour=mysqli_num_rows($req);
 
@@ -65,9 +66,15 @@ function modif_profil($lid)
                             //  {
                             //    $ocnewimg = $_POST['image'];
                             //  }
+                                      $age = htmlspecialchars($_POST['Age']);
+                                      $sexe = $_POST['sexe'] ;
+                                      $region =  $_POST['region'];
+                                      $tel = htmlspecialchars($_POST['tel']) ;
+                                      $ville = htmlspecialchars($_POST['ville']) ;
                                       
-                           $requeteupdate ="UPDATE utilisateurs SET login = '$login' , password = '$password' WHERE id='$lid'";        
+                           $requeteupdate ="UPDATE utilisateurs SET login = '$login' , password = '$password', Age = $age , sexe = '$sexe' , region = '$region' , tel = $tel , ville = '$ville'  WHERE id='$lid'";        
                              $inser= mysqli_query($connexion,$requeteupdate);
+                             var_dump($requeteupdate);
                            //  header("location: profil.php?id=".$id_user_profil."");
                           } 
                           else
