@@ -1,6 +1,17 @@
-<header>
-	<?php include "header.php"; ?>
-</header>
+<link rel="stylesheet" type="text/css" href="../css/connexion.css">
+<link rel="stylesheet" type="text/css" href="../css/accueil.css">
+<link rel="icon" type="image/png" href="../pics/icon/jeMePropose.png">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<div class="header-logo-title">
+            <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+            <h1>Je-me-propose.com</h1>
+        </div>
+
+        <header class="block-accueil">
+            <?php include "../source/header.php";  ?>
+
+        </header>
 
 
 
@@ -44,10 +55,9 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 // --------------------------------------------FIN PHP--------------------------------------------
 ?>
 	
-<section>
+<section class="connexion">
 	<div class="form-style-5">
-		<form method="post" action="connexion.php">
-		<fieldset>
+		<form class="Formul" method="post" action="connexion.php">
 		<legend>Connexion</legend>	
 		<div class="input">
 		<input type="text" name="champ1" placeholder="Login *">
@@ -58,7 +68,6 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 		<div class="input">
 		<input type="submit" name="Valider" value="SE CONNECTER"/>
 		</div>
-		</fieldset>
 		</form>
 	</div>
 </section>				
@@ -70,6 +79,16 @@ else
 header("location: accueil.php");
 }
 ?>	
+
+<footer class="block-accueil">
+            <ul>
+                <li><a href="accueil.php">accueil</a></li>
+                <li><a href="infos.php">informations</a></li>
+                <li><a href="connexion.php">connexion</a></li>
+                <li><a href="inscription.php">inscription</a></li>
+                <li><a href="contact.php">contact</a></li>
+            </ul>
+        </footer>
 </body>
 
 
