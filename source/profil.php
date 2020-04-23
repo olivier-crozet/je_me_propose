@@ -12,8 +12,10 @@
 		
 	<body class="oc-body-accueil-btp">
   
-				<?php include('header.php'); ?>  
-		
+				<?php include('header.php'); 
+        include('fonction_profil.php');
+        ?>  
+
     <section class="section-deventure">    
 		<div>
        <?php 
@@ -25,10 +27,10 @@
     <div>
       <?php 
 
-      affichage_rofil();
+      affichage_profil();
       ?>
     </div>
-<form class="form" method="POST" enctype="multipart/form-data">
+<form class="form" method="POST" action="" enctype="multipart/form-data">
   <table class="oc-tablinscri">
           <tr>
             <td>
@@ -43,7 +45,7 @@
               <label for="image">inserer votre image de profil : </label>
             </td>
             <td>
-              <input type="file" name ="image" placeholder="">
+              <input type="file" name ="avatar" placeholder="">
             </td>
           </tr>
           <tr>
@@ -67,13 +69,19 @@
         </table>
         <br/>
                    <input  class="buton-inscription" type="submit" name="modif" value="modifier le profil !"/>
-         
+         </form> 
+<?php
 
-  </form> 
-  <?php
-  modif_profil();
-  modif_image_profil();
+if (isset($_POST['modif'])) 
+{
+modif_profil($_SESSION['id']);
+
+  //modif_image_profil();
+  
+}
   ?>
+  
+  
 
  </main>
      </section>
