@@ -98,3 +98,15 @@ body
   background: rgb(173, 207, 244);
   margin: auto;
 }
+
+a
+{
+  color:#0faf7f;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+a:hover
+{
+  opacity:0.5;
+}
