@@ -101,7 +101,7 @@ if (isset($_POST['modif']))
 {
 modif_profil($_SESSION['id']);
 
-  //modif_image_profil();
+  modif_image_profil();
   
 }
   ?>

@@ -104,16 +104,16 @@ function modif_image_profil()
                                    $extensionvalide = array('jpg', 'jpeg', 'gif', 'png');  
                                    //veri la taille
                                      if ($_FILES['avatar']['size'] <= $taillemax)
-                                      { echo"aa";
+                                      { 
                                         // met tous les carractere en minuscule                                    1=limite de chaine
                                          $extensionupload = strtolower(substr(strchr($_FILES['avatar']['name'],'.'), 1));
                                          //verif extention
                                              if (in_array($extensionupload, $extensionvalide)) 
-                                             {echo "bb";
-                                               $chemin = "../profilPics/".".".$_SESSION['id'].".".$extensionupload;
+                                             {
+                                               $chemin = "../avatar/".".".$_SESSION['id'].".".$extensionupload;
                                                $couenta = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
                                                     if ($couenta)
-                                                     { echo "cc";
+                                                     { 
                                                       $connexion=mysqli_connect("localhost","root","","je_me_propose");
 
                                                      	$id = $_SESSION['id'];
