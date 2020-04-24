@@ -127,9 +127,10 @@ if(!empty($_POST['Valider']))
 			$region= htmlspecialchars($_POST['champ6']);
 			$tel= htmlspecialchars($_POST['champ7']);
 			$ville= htmlspecialchars($_POST['champ8']);
+			$image_par_defaut = "../avatar/profil.jpg";
 
-			$req2 = "INSERT INTO utilisateurs(login,password,age,sexe,region,tel,ville)VALUES
-			('$login','$hash',$age,'$Sexe','$region','$tel','$ville')";
+			$req2 = "INSERT INTO utilisateurs(login,password,age,sexe,region,tel,ville,profilPic)VALUES
+			('$login','$hash',$age,'$Sexe','$region','$tel','$ville','$image_par_defaut')";
 
 			mysqli_query($connexion, $req2);		 
 			mysqli_close($connexion);
@@ -213,6 +214,14 @@ else
 	header('location: ../index.php');
 }
 ?>
-
+  <footer class="block-accueil">
+            <ul>
+                <li><a href="infos.php">accueil</a></li>
+                <li><a href="">connexion</a></li>
+                <li><a href="">inscription</a></li>
+                <li><a href="">informations</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </footer>
 </html>
 
