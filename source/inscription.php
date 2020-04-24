@@ -8,7 +8,7 @@ if(!isset($_SESSION['id']))
 ?>
 
 <head>
-	<link href="forum.css" rel="stylesheet">
+	<link href="../css/inscription.css" rel="stylesheet">
 	<title>Inscription</title>
 	<meta charset="UTF-8">
 </head>
