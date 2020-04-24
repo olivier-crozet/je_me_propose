@@ -94,6 +94,7 @@ include "fonction_demandeur.php";
     recherche();
     ?>
 	</main>
-
+ 
 </body>
+
 </html>

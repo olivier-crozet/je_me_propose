@@ -87,5 +87,14 @@
     insertion_aidant()
     ?>
 	</main>
+      <footer class="block-accueil">
+            <ul>
+                <li><a href="infos.php">accueil</a></li>
+                <li><a href="">connexion</a></li>
+                <li><a href="">inscription</a></li>
+                <li><a href="">informations</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </footer>
 </body>
 </html>
