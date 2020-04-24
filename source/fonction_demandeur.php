@@ -8,6 +8,8 @@ function recherche()
 	 	//date actuel
 	 	$datetoday = date("Y-m-d H:i:s");
 	 	//date actuel en timestamp
+
+	 	$de = date("Y-m-d");
 	 	$today = strtotime($datetoday);
 	
 	 	//heure par valeur
@@ -19,8 +21,9 @@ function recherche()
 	 	//connexion bdd
 	 	$connexion=mysqli_connect("localhost","root","","je_me_propose");
 	 	//requette joignan le deux table
-	 	$requette_cherche = "SELECT u.login, u.age , u.sexe, u.ville, u.tel, d.region, d.date_dispo, d.heure_dispo, d.description  FROM utilisateurs as u  INNER JOIN dispo as d WHERE  d.region = '$region' AND d.date_dispo > now() ";
-	 
+	 	$da = date('y,m,d');
+	 	$requette_cherche = "SELECT u.login, u.age , u.sexe, u.ville, u.tel, d.region, d.date_dispo, d.heure_dispo, d.description  FROM utilisateurs as u  INNER JOIN dispo as d WHERE  d.region = '$region' AND d.date_dispo  >= DATE(NOW()) ";  //now()  SELECT DATE( NOW() ); date('y,m,d')
+	
 	 	$fusion_requette_cherche =mysqli_query($connexion,$requette_cherche);
 	 	//metre tous les resultat dans un tableau
 	 	$result = mysqli_fetch_all($fusion_requette_cherche);
