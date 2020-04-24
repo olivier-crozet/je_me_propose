@@ -19,7 +19,7 @@
         </div>
 
         <header class="block-accueil">
-            <?php include "../source/header.php";  ?>
+            <?php include "../source/header.php";?>
 
         </header>
 

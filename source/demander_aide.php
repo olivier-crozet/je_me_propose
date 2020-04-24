@@ -1,29 +1,35 @@
+<head>
+    <meta charset="utf-8">
+    <title>Demander de l'aide</title>
+   <link rel="stylesheet" type="text/css" href="../css/demande_aide.css">
+    <link rel="stylesheet" type="text/css" href="../css/proposer_mon_aide.css">
+
+     <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="icon" type="image/png" href="../pics/icon/jeMePropose.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div id="container-mise-en-page">
+
+<div class="header-logo-title">
+            <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+            <h1>Je-me-propose.com</h1>
+        </div>
+
+        <header  class="block-accueil">
+            <?php include "../source/header.php";  ?>
+
+        </header>
 <?php 
 
 
 include "fonction_demandeur.php";
 
-
-
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<title>Demander de l'aide</title>
-	<link rel="stylesheet" type="text/css" href="../css/demande_aide.css">
-</head>
-<body>
-    <header>
-        <?php
-        include "header.php";
-        securiter();
-        ?>
-    </header>
 	<main>
 		<h1>Demandez de l'aide</h1>
-		<form method="post" action="">
+		 <div class="form-style-5">
+        <form method="post" action="">
 		<!-- Département -->
 		<label for="Region">Votre région</label>
         <select name="Region" id="Region">
@@ -77,11 +83,12 @@ include "fonction_demandeur.php";
         <textarea></textarea>
         <input type="submit" name="validation_help" value="validé">
 	</form>
-    
+        </div>
 
         <table>
         <thead>
-            <tr>age</tr><tr>sexe</tr><tr>ville</tr><tr>tel</tr><tr>region</tr><tr>date</tr><tr>heure</tr><tr>description</tr>
+        </br>
+            <tr class="premiere-ligne"><td>Login</td><td>age</td><td>sexe</td><td>ville</td><td>tel</td><td>region</td><td>date</td><td>heure</td><td>description</tr>
         </thead>
 <?php
     recherche();

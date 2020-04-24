@@ -1,13 +1,28 @@
-<header>
-	<?php include "header.php"; ?>
-</header>
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Demander de l'aide</title>
+	<link rel="stylesheet" type="text/css" href="../css/connexion.css">
+     <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="icon" type="image/png" href="../pics/icon/jeMePropose.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="header-logo-title">
+            <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+            <h1>Je-me-propose.com</h1>
+        </div>
+
+        <header class="block-accueil">
+            <?php include "../source/header.php";  ?>
+
+        </header>
 
 
 
 <?php	
 // --------------------------------------------DEBUT PHP--------------------------------------------
-//session_start();
-
 if(!isset($_SESSION['id']))
 {
 
@@ -26,7 +41,8 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 	
 	$_SESSION['login'] =htmlspecialchars($_POST['champ1']);;
 	$_SESSION['id'] = $row['id'];
-	}
+	header('location: accueil.php');
+}
 	else
 	{	
 	?>
@@ -41,6 +57,7 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 	<?php
 	}
 }
+
 // --------------------------------------------FIN PHP--------------------------------------------
 ?>
 	
@@ -67,7 +84,7 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 }
 else
 {
-header("location: accueil.php");
+//header("location: accueil.php");
 }
 ?>	
 </body>

@@ -7,8 +7,9 @@ include("fonction_oc.php");
 
 
 	<a href="accueil.php">accueil</a>
+	<a href="infos.php">infos</a>
 	<?php 
-	if (isset($_SESSION['id']))
+	if (!empty($_SESSION['id']))
 	 { ?>
 	 	<a href="profil.php">profil</a>
 	 	<a href="proposer_son_aide.php">aider</a>
@@ -21,7 +22,7 @@ include("fonction_oc.php");
 <?php }
 
 	?>
-	<a href="">contact</a>
+	<a href="contact.php">contact</a>
 	<form action="" method="post">
 	<input type="submit" name="deco" value="déconnection"> 
 	<?php suprime() ?>

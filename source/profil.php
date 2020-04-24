@@ -15,6 +15,8 @@
 	</head>
 		
 	<body class="oc-body-accueil-btp">
+     <div id="container-mise-en-page">
+
   <div class="header-logo-title">
             <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
             <h1>Je-me-propose.com</h1>

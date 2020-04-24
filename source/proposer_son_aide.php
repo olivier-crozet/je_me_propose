@@ -1,26 +1,33 @@
-<?php 
-
- include "fonction_aidant.php";
-//////////verifier si la personne est connecter/////
-  //  securiter();
-
-?>
 <!DOCTYPE html>
-<html>
 <head>
-	<meta charset="utf-8">
-	<title>Je propose mon aide</title>
-	<link rel="stylesheet" type="text/css" href="../css/proposer_mon_aide.css">
+    <meta charset="utf-8">
+    <title>Demander de l'aide</title>
+    <link rel="stylesheet" type="text/css" href="../css/proposer_son_aide.css">
+     <link rel="stylesheet" type="text/css" href="../css/accueil.css">
+    <link rel="icon" type="image/png" href="../pics/icon/jeMePropose.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/oc.css">
+
+
 </head>
-<header>
-    <?php //header dans une page dedier
-     include"header.php"; 
-     ?>
-</header>
+<body>
+     <div id="container-mise-en-page">
+
+<div class="header-logo-title">
+            <img src="../pics/icon/jeMePropose.png" alt="je me propose logo" title="Site d'entraide">
+            <h1>Je-me-propose.com</h1>
+        </div>
+
+        <header id ="oc-header-proposer"  class="block-accueil">
+            <?php include "../source/header.php";
+                include"fonction_aidant.php";  ?>
+
+        </header>
 <body>
 	<main>
-		<h1><?php  ecrire_login_by_id()  ?> proposez votre aide</h1>
-		<form method="post" action="" >
+		<h1 id="titre"> Bonjour, <?php ecrire_login_by_id() ?>: proposez votre aide</h1>
+		<div class="formulaire">
+        <form method="post" action="" >
 		<!-- Département -->
 		<label for="Region">Votre région</label>
         <select name="Region" id="Region">
@@ -75,6 +82,7 @@
         <input type="submit" name="validation_dispo" value="Valider">
         
 	</form>
+</div>
     <?php
     insertion_aidant()
     ?>

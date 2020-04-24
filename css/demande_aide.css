@@ -73,3 +73,80 @@ textarea
 {
   border: 3px solid;
 }
+#content{
+  margin-left: 40%;
+}
+.form-style-5{
+display:flex;
+justify-content:center;
+margin-top:5%;
+background-color: rgb(34, 206, 157);
+width: 40%;
+margin: auto;
+border-style: solid;
+}
+option, select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+
+
+option {
+  width: 50%;
+  background-color:rgb(28, 145, 111);
+  color: white;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  margin-top:3%;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-family: 'Varela Round', sans-serif;
+}
+
+option {
+  width: 50%;
+  background-color: #df773b ;
+  color: white;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-family: 'Varela Round', sans-serif;
+}
+
+option:hover {
+  background-color: rgb(8, 44, 34);
+}
+option:hover {
+  background-color: #5c380c;
+}
+table{
+  text-align: center;
+  border-style: solid;
+  margin: auto;
+}
+td{
+  border-style: solid;
+  width: 10%;
+  overflow-wrap: break-word;
+  color: white;
+  background-color: rgb(34, 206, 157);
+}
+tr.premiere-ligne{
+  background-color: orange;
+  font-size: 30px;
+  background-color:#2f3a4b;
+  margin:auto;
+}
+#oc_baba
+{
+  height: 80PX;
+}

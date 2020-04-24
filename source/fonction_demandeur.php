@@ -31,7 +31,7 @@ function recherche()
 	 	for ($i=0; $i < $compte ; $i++) 
 	 	{ 
 	 		
-	 		echo "<tr><td>".$result[$i][0].$result[$i][1],$result[$i][2],$result[$i][3],$result[$i][4],$result[$i][5],$result[$i][6].$result[$i][7],$result[$i][8]."</td></tr>";
+	 		echo "<tr><td>".$result[$i][0]."</td><td>".$result[$i][1]."</td><td>",$result[$i][2]."</td><td>",$result[$i][3]."</td><td>",$result[$i][4]."</td><td>",$result[$i][5]."</td><td>",$result[$i][6]."</td><td>".$result[$i][7]."</td><td>",$result[$i][8]."</td></tr>";
 	 		
 	 	}
 

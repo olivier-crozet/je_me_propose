@@ -8,7 +8,7 @@ if(!isset($_SESSION['id']))
 ?>
 
 <head>
-	<link href="forum.css" rel="stylesheet">
+	<link href="../css/inscription.css" rel="stylesheet">
 	<title>Inscription</title>
 	<meta charset="UTF-8">
 </head>
@@ -100,7 +100,7 @@ if(!empty($_POST['Valider']))
 			</div>
 			<?php			
 		}
-		else if(strlen($_POST['champ2']< 5))
+		else if(strlen($_POST['champ2']< 3))
 		{  
 			?>
 			<div class="erreur">
@@ -108,7 +108,7 @@ if(!empty($_POST['Valider']))
 			<div class="affichage">
 			<?php
 			echo"*Mots de passes trop courts";
-			echo " 5 caractères minimum";
+			echo " 3 caractères minimum";
 			mysqli_close($connexion);
 			?>
 			</div>
@@ -127,9 +127,9 @@ if(!empty($_POST['Valider']))
 			$region= htmlspecialchars($_POST['champ6']);
 			$tel= htmlspecialchars($_POST['champ7']);
 			$ville= htmlspecialchars($_POST['champ8']);
-			$image_par_defaut = "../profilPics/profil.jpg";
-			$req2 = "INSERT INTO utilisateurs(login,password,age,sexe,region,tel,ville,profilPic)VALUES
-			('$login','$hash',$age,'$Sexe','$region','$tel','$ville','$image_par_defaut')";
+
+			$req2 = "INSERT INTO utilisateurs(login,password,age,sexe,region,tel,ville)VALUES
+			('$login','$hash',$age,'$Sexe','$region','$tel','$ville')";
 
 			mysqli_query($connexion, $req2);		 
 			mysqli_close($connexion);
