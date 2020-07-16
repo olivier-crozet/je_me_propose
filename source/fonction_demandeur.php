@@ -22,7 +22,7 @@ function recherche()
 	 	$connexion=mysqli_connect("localhost","root","","je_me_propose");
 	 	//requette joignan le deux table
 	 	$da = date('y,m,d');
-	 	$requette_cherche = "SELECT u.login, u.age , u.sexe, u.ville, u.tel, d.region, d.date_dispo, d.heure_dispo, d.description  FROM utilisateurs as u  INNER JOIN dispo as d WHERE  d.region = '$region' AND d.date_dispo  >= DATE(NOW()) ";  //now()  SELECT DATE( NOW() ); date('y,m,d')
+	 	$requette_cherche = "SELECT u.login, u.age , u.sexe, u.ville, u.tel, d.region, d.date_dispo, d.heure_dispo, d.description  FROM utilisateurs as u  INNER JOIN dispo as d WHERE  d.region = '$region' AND d.date_dispo >= DATE(NOW()) ";  //now()  SELECT DATE( NOW() ); date('y,m,d')
 	
 	 	$fusion_requette_cherche =mysqli_query($connexion,$requette_cherche);
 	 	//metre tous les resultat dans un tableau
@@ -31,11 +31,12 @@ function recherche()
 	 	//nombre de resultat bdd
 	 	$compte = mysqli_num_rows($fusion_requette_cherche);
 	 	/////////affichage des donner
+	 	var_dump($result);
 	 	for ($i=0; $i < $compte ; $i++) 
 	 	{ 
 	 		
 	 		echo "<tr><td>".$result[$i][0]."</td><td>".$result[$i][1]."</td><td>",$result[$i][2]."</td><td>",$result[$i][3]."</td><td>",$result[$i][4]."</td><td>",$result[$i][5]."</td><td>",$result[$i][6]."</td><td>".$result[$i][7]."</td><td>",$result[$i][8]."</td></tr>";
-	 		
+	 		var_dump($result[$i][6]);
 	 	}
 
 	}

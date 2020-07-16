@@ -30,7 +30,7 @@ if((isset($_POST['Valider']))&&(isset($_POST['champ1']))&&(isset($_POST['champ2'
 {
 
 	$connexion= mysqli_connect("localhost", "root", "", "je_me_propose"); 
-	$login=$_POST['champ1'];
+	$login=htmlspecialchars($_POST['champ1']);
 	$query="SELECT *from utilisateurs WHERE login='$login'";
 	$result= mysqli_query($connexion, $query);
 	$row = mysqli_fetch_array($result);

@@ -24,21 +24,16 @@ function insertion_aidant()
 			   	$heure = $_POST['heure_dispo'];
 			   	//recuperation du time stamp de la date
 			   	$datest = strtotime($date);
-
-			   	$description = htmlspecialchars($_POST['raison']);
+			   	$description = ($_POST['raison']);
 			   	$connexion=mysqli_connect("localhost","root","","je_me_propose");
 			   	$requette_insretion_bdd_dispo = " INSERT INTO dispo (id_user,region,date_dispo,heure_dispo,description,date_st) VALUES ($id,'$region','$date',$heure,'$description',$datest)"	;
 			   	$execution = mysqli_query($connexion,$requette_insretion_bdd_dispo);
-			echo "Merci";
-			//   	header("location:profil.php");		
+			echo "Merci";		
 			   }
 			   else
 			   {
 			   	echo "le message doit comprendre moins de 500 caracteres !";
 			   }
-
-
-
 		    }
 		    else
 		    {
